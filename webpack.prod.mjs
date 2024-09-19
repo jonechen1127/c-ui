@@ -1,6 +1,5 @@
 import path from 'path';
-import TerserPlugin from 'terser-webpack-plugin';
-import CompressionPlugin from 'compression-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin'; 
 import { fileURLToPath } from 'url';
 import { VueLoaderPlugin } from 'vue-loader';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -46,6 +45,18 @@ export default {
         loader: 'vue-loader'
       }
     ]
+  },
+  optimization: {
+    minimize: true, // 开启代码压缩
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true, // 移除 console
+          },
+        },
+      }),
+    ],
   },
   plugins: [new VueLoaderPlugin(), new BundleAnalyzerPlugin()]
 };
