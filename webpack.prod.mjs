@@ -20,16 +20,21 @@ export default {
     path: path.resolve(__dirname, 'lib'),
     filename: '[name].js',
     publicPath: '/',
-    clean: true, // 清理输出目录,
+    clean: true, // 清理输出目录
     library: {
-      type: 'umd',
-      name: 'CUI'
+      type: 'module', // 使用 ESM 模块格式
+    },
+    environment: {
+      module: true, // ESM 相关配置
     }
+  },
+  experiments: {
+    outputModule: true, // 启用 ESM 输出功能
   },
   mode: 'production',
   devtool: 'source-map', // 生成 source map 以帮助调试
   externals: {
-    vue: 'vue'
+    vue: 'vue', // Vue 应声明为外部依赖
   },
   resolve: {
     extensions: ['.js', '.mjs', '.json', '.vue', '.css', '.scss']
