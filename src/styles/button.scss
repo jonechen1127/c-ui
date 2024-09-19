@@ -1,0 +1,64 @@
+// 导入基础样式
+@import './base.scss';
+
+// 按钮样式
+.c-button {
+  display: inline-block;
+  padding: $button-padding-normal;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  font-size: $button-font-size-normal;
+  line-height: 1.5;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color $transition-duration $transition-ease, 
+              border-color $transition-duration $transition-ease, 
+              color $transition-duration $transition-ease;
+
+  // 默认按钮样式
+  &.c-button-default {
+    background-color: $button-bg-default;
+    color: $button-text-default;
+    border-color: $button-border-default;
+
+    &:hover {
+      background-color: adjust-color($button-bg-default, $lightness: -10%);
+    }
+  }
+
+  // 主按钮样式
+  &.c-button-primary {
+    background-color: $button-bg-primary;
+    color: $button-text-primary;
+    border-color: $button-border-primary;
+
+    &:hover {
+      background-color: adjust-color($button-bg-primary, $lightness: -10%);
+      border-color: adjust-color($button-border-primary, $lightness: -15%);
+    }
+  }
+
+  // 次要按钮样式
+  &.c-button-secondary {
+    background-color: $button-bg-secondary;
+    color: $button-text-secondary;
+    border-color: $button-border-secondary;
+
+    &:hover {
+      background-color: adjust-color($button-bg-secondary, $lightness: -10%);
+      border-color: adjust-color($button-border-secondary, $lightness: -15%);
+    }
+  }
+
+  // 大按钮样式
+  &.c-button-large {
+    font-size: $button-font-size-large;
+    padding: $button-padding-large;
+  }
+
+  // 小按钮样式
+  &.c-button-small {
+    font-size: $button-font-size-small;
+    padding: $button-padding-small;
+  }
+}

@@ -1,0 +1,16 @@
+// aside.scss
+
+.c-aside {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  height: 100%; // 使侧边栏占满整个视口高度
+  overflow-y: auto; // 启用垂直滚动条以处理内容溢出
+  width: 240px;
+  &-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+}

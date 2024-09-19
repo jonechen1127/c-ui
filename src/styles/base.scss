@@ -1,0 +1,19 @@
+@import './color.scss';
+
+// base.scss
+
+// 尺寸变量
+$button-padding-large: 0.75rem 1.5rem;
+$button-padding-normal: 0.5rem 1rem;
+$button-padding-small: 0.25rem 0.5rem;
+
+$button-font-size-large: 1.25rem;
+$button-font-size-normal: 1rem;
+$button-font-size-small: 0.875rem;
+
+// 过渡效果
+$transition-duration: 0.3s;
+$transition-ease: ease;
+
+// 其他常用变量
+$border-radius: 0.25rem;

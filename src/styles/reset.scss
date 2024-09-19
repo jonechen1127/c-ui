@@ -1,0 +1,105 @@
+// reset.scss
+
+// Reset box-sizing to border-box for all elements
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Remove default margin and padding
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+dl,
+figure,
+blockquote,
+pre,
+table,
+fieldset,
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+// Set a basic font size and line height for the body
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+// Remove list styles for ul and ol
+ul,
+ol {
+  list-style: none;
+}
+
+// Remove quotes from blockquote and q
+blockquote,
+q {
+  quotes: none;
+}
+
+// Remove border from fieldset and add a margin
+fieldset {
+  border: none;
+  margin: 0;
+}
+
+// Reset form elements
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Remove default table border spacing
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Ensure images and videos are responsive
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+// Reset anchor styles
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Ensure all elements are not affected by unexpected styles
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  cursor: help;
+}
+
+code,
+pre {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 1rem 0;
+}
+
+// Ensure the viewport meta tag is included for responsive design
+html {
+  scroll-behavior: smooth;
+}
+

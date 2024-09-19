@@ -6,12 +6,8 @@
     "lib",
     "src",
     "packages",
-    "src"
+    "example"
   ],
-  "directories": {
-    "example": "example",
-    "lib": "lib"
-  },
   "scripts": {
     "dev": "webpack serve --mode development --config webpack.dev.mjs --open --hot",
     "build": "webpack --mode production --config webpack.prod.mjs --progress --color",

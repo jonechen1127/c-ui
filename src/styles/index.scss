@@ -1,0 +1,15 @@
+@import './base.scss';
+@import './layout.scss';
+@import './button.scss';
+@import './layout/aside.scss';
+@import './layout/header.scss';
+@import './layout/section.scss';
+$color: #333;
+#app,
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #f6f6f6;
+  user-select: none;
+}
