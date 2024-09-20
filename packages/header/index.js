@@ -3,5 +3,5 @@ import CHeader from './Header.vue';
 CHeader.install = function (Vue) {
   Vue.component(CHeader.name, CHeader);
 };
-export const header = CHeader;
+export const Header = CHeader;
 export default CHeader;

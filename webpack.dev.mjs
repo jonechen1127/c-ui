@@ -23,11 +23,9 @@ export default {
   },
   resolve: {
     extensions: ['.js', '.mjs', '.json', '.vue', '.css', '.scss'],
-    // alias: {
-    //   '@src': path.resolve(__dirname, 'example/src'),
-    //   '@components': path.resolve(__dirname, 'example/src/components'),
-    //   '@assets': path.resolve(__dirname, 'example/src/assets')
-    // }
+    alias: {
+      '~': path.resolve(__dirname, 'src'),
+    }
   },
   module: {
     rules: [
