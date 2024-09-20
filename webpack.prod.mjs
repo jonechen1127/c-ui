@@ -26,7 +26,7 @@ export default {
   },
   output: {
     path: path.resolve(__dirname, 'lib'),
-    filename: '[name].esm.js',
+    filename: '[name].js',
     publicPath: '/',
     clean: true, // 清理输出目录
     library: {
