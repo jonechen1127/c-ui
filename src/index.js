@@ -1,7 +1,8 @@
 import * as Components from '../packages/index.js';
 export * from '../packages/index.js'; //按需导出
-const name = 'jack';
-const version = '1.0.0';
+import packageJson from '../package.json';
+
+const { name, version } = packageJson;
 
 const install = app => {
   Object.keys(Components).forEach(key => {
