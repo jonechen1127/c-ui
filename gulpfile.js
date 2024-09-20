@@ -4,7 +4,8 @@ import * as sass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import cssnano from 'cssnano';
+import cssnano from 'cssnano'; 
+import postcssSorting from 'postcss-sorting'; 
 
 // 配置 gulp-sass 使用 Dart Sass
 const sassCompiler = gulpSass(sass);
@@ -15,7 +16,10 @@ export function styles() {
     .pipe(sassCompiler().on('error', sassCompiler.logError)) // 编译 SCSS 并处理错误
     .pipe(postcss([
       autoprefixer(), // 添加浏览器前缀
-      cssnano()       // 优化 CSS
+      cssnano(),       // 优化 CSS
+      postcssSorting({ // 添加 postcss-sorting 插件
+        "properties-order": "alphabetical" // 按字母顺序排序 (可根据需求调整)
+      })
     ]))
     .pipe(gulp.dest('lib/css')); // 输出目录
 }
